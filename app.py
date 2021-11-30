@@ -1,13 +1,12 @@
 from flask import Flask, render_template
+import json
+
 
 app = Flask(__name__)
 
-@app.route("/", methods=['GET'])
-def home():
-    return render_template("home.html")
 
-class produto:
-    def __init__(self, id:int, nome:str, imagem:str, oldprice:float, price:float, description:str, parcela:int, valorparcela:float):
+class Produto:
+    def __init__(self, id:int, nome:str, imagem:str, oldprice:float, price:float, description:str, parcela:int, valorParcela:float):
         self._nome = nome
         self._id = id
         self._imagem = imagem
@@ -15,7 +14,7 @@ class produto:
         self._price = price
         self._description = description
         self._parcela = parcela
-        self._valorparcela = valorparcela
+        self._valorParcela = valorParcela
     
     @property
     def id(self):
@@ -29,7 +28,7 @@ class produto:
         return self._nome
     @nome.setter
     def nome(self, value):
-        self.__nome = value
+        self._nome = value
 
     @property
     def imagem(self):
@@ -72,3 +71,33 @@ class produto:
     @valorParcela.setter
     def valorParcela(self, value):
         self._valorParcela = value
+    
+produtos = []
+with open("products.json") as documento:
+    listajson = json.load(documento)
+    documento.close()
+
+for i in listajson:
+    id = i['id']
+    nome = i['name']
+    imagem = i['image']
+    oldprice = i['oldPrice']
+    price = i['price']
+    description = i['description']
+    parcelas = i['installments']
+    totparcelas = parcelas['count']
+    valparcelas = parcelas['value']
+    carregar_produto = Produto(
+        id,
+        '{}'.format(nome),
+        '{}'.format(imagem),
+        oldprice,
+        price,
+        '{}'.format(description),
+        totparcelas,
+        valparcelas)
+    produtos.append(carregar_produto)
+
+@app.route("/", methods=['GET'])
+def home():
+    return render_template("home.html", produtos = produtos)
