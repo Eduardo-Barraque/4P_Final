@@ -57,28 +57,36 @@
             <div class="listaprodutos">
                 {%for produto in produtos%}
                     <div class="produto">
-                            <img class="imagemproduto" src="{{produto.imagem}}">
-                            <p class="nome">{{produto.nome}} </p>
-                            <p class="descricao">{{produto.description}}</p>
-                            <p class="oldprice">de R${{produto.oldprice}}</p>
-                            <p class="price">por R${{produto.price}}</p>
-                            <p class="parcelado">ou {{produto.parcela}}x de R${{produto.valorParcela}}0</p>
-                            <button>Comprar</button>
+                        <img class="imagemproduto" src="{{produto.imagem}}">
+                        <p class="nome">{{produto.nome}} </p>
+                        <p class="descricao">{{produto.description}}</p>
+                        <p class="oldprice">de R${{produto.oldprice}}</p>
+                        <p class="price">por R${{produto.price}}</p>
+                        <p class="parcelado">ou {{produto.parcela}}x de R${{produto.valorParcela}}0</p>
+                        <button>Comprar</button>
                     </div>
                 {%endfor%}
             </div>
             <button>Ainda mais produtos aqui!</button>
         </div>
-        <div id="compartilhe_section">Compartilhe a novidade</div>
-        <div>
-            <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
-            <form>
-                <label for="">Nome do seu amigo</label>
-                <input type="text" name="" id="">
-                <label for="">E-Mail</label>
-                <input type="text" name="" id="">
-                <input type="submit" value="Enviar Agora">
-            </form>
+        <div id="compartilhe_section">
+            <h1>Compartilhe a novidade</h1>
+            <div>
+                <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
+                <form>
+                    <div class="formulario">
+                        <div class="campoform">
+                            <label for="">Nome do seu amigo</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="campoform">
+                            <label for="">E-Mail</label>
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <input class="inputenviaramigo" type="submit" value="Enviar Agora">
+                </form>
+            </div>
         </div>
     </article>
     <footer>

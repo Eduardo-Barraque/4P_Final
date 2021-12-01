@@ -125,6 +125,20 @@ header button{
     padding-bottom: 1.5vh;
     border-radius: 0.8vh;
 }
+article h1{
+    color: #888888;
+    font-family: Helvetica;
+    font-size: 2.8vh;
+    margin: 2vh;
+    margin-top: 5vh;
+}
+article p{
+    color: #888888;
+    font-family: Helvetica;
+    font-size: 2vh;
+    margin: 2vh;
+    text-align: justify;
+}
 /* section dos produtos*/
 #produtos_section{
     grid-area: produtos;
@@ -135,6 +149,7 @@ header button{
 #produtos_section h1{
     color: #888888;
     text-align: center;
+    font-size: 3vh;
 }
 
 .listaprodutos{
@@ -156,6 +171,7 @@ header button{
 .imagemproduto{
     border: 0.3vh solid #707070;
 }
+
 /*Informaçoes de cada produto*/
 .nome{
 font-size: 2.4vh;
@@ -186,17 +202,58 @@ margin-top: 3vh;
 #compartilhe_section{
     grid-area: compartilhe;
 }
-article h1{
+#compartilhe_section h1{
     color: #888888;
-    font-family: Helvetica;
-    font-size: 2.8vh;
-    margin: 2vh;
-    margin-top: 5vh;
+    text-align: center;
+    font-size: 3vh;
 }
-article p{
+#compartilhe_section p{
+    text-align: center;
+    font-size: 2.4vh;
+}
+
+.formulario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     color: #888888;
-    font-family: Helvetica;
+}
+.campoform{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+    font-size: 2.4vh;
+}
+
+.campoform input{
+    width: 50vh;
+    height: 3.7vh;
+}
+#compartilhe_section form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputenviaramigo{
+    width: 30vw;
+    margin-bottom: 3vh;
+    color: #888888;
+    background-color: #FFFFFF;
+    border: 0.4vh solid;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-radius: 0.8vh;
+}
+/* footer*/
+
+footer{
+    background-color: #707070;
+    color: #FFFFFF;
+    text-align: center;
     font-size: 2vh;
-    margin: 2vh;
-    text-align: justify;
+    padding: 5vh;
+    font-family: Helvetica;
 }
