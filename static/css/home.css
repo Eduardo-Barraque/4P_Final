@@ -1,10 +1,16 @@
 body{
+    background-color: #FFFFFF;
     display:grid;
     grid-template-areas: "cabecalho" "corpo" "rodape";
+    margin: 0px;
     
 }
 body header{
     grid-area: cabecalho;
+    background-color: #707070;
+    display: grid;
+    grid-template-areas: "h1" "h2" "h3" "botoes";
+    padding: 7vh;
 }
 
 body article{
@@ -13,4 +19,68 @@ body article{
 
 body footer{
     grid-area: rodape;
+}
+/*Botões geral*/
+ button{
+    text-decoration: none;
+    color: #888888;
+    background-color: #FFFFFF;
+    border: 0.4vh solid;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-radius: 0.8vh;
+}
+
+button :link{
+    text-decoration: none;
+    color:#888888
+}
+
+button :visited{text-decoration: none;
+color:#888888;
+}
+
+button :hover{text-decoration: none;
+    color:#888888;
+    }
+
+/*Grid do header*/
+header h1{
+    grid-area: h1;
+    margin: 0vh;
+    text-align: center;
+    font-size: 2.8vh;
+    font-family: Helvetica;
+    color: #FFFFFF;
+    
+}
+
+header h2{
+    grid-area: h2;
+    margin: 0vh;
+    text-align: center;
+    font-size: 5.6vh;
+    font-family: Helvetica;
+    color: #FFFFFF;
+}
+
+header h3{
+    grid-area: h3;
+    margin: 2vh;
+    text-align: center;
+    font-size: 2.1vh;
+    font-family: Helvetica;
+    color: #FFFFFF;
+}
+header div{
+    grid-area: botoes;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header button{
+    margin-left: 1.5vh;
+    margin-right: 1.5vh;
 }

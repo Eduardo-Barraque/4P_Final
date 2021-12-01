@@ -13,13 +13,15 @@
         <h1>uma seleção de produtos</h1>
         <h2>especial para você</h2>
         <h3>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</h3>
-        <button>Conheça a Linx</button>
-        <button>Ajude o algorítimo</button>
-        <button>Seus produtos</button>
-        <button>Compartilhe</button>
+        <div>
+            <button><a href="#conhecer_section">Conheça a Linx</a></button>
+            <button><a href="#ajudar_section">Ajude o algorítimo</a></button>
+            <button><a href="#produtos_section">Seus produtos</a></button>
+            <button><a href="#compartilhe_section">Compartilhe</a></button>
+        </div>
     </header>
     <article>
-        <div>
+        <div id="conhecer_section">
             <p>Ajude o algorítimo a ser mais certeiro</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. 
@@ -35,7 +37,7 @@
                 Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
         </div>
         <div>
-            <form>
+            <form id="ajudar_section">
                 <label for="">Seu Nome:</label>
                 <input type="text" name="" id="">
                 <label for="">E-Mail:</label>
@@ -49,7 +51,7 @@
                 <input type="submit" value="Enviar">
             </form>
         </div>
-        <div>Sua seleção especial</div>
+        <div id="produtos_section">Sua seleção especial</div>
         <div>
             {%for produto in produtos%}
                 <img src="{{produto.imagem}}">
@@ -61,7 +63,7 @@
             {%endfor%}
         </div>
         <button>Ainda mais produtos aqui!</button>
-        <div>Compartilhe a novidade</div>
+        <div id="compartilhe_section">Compartilhe a novidade</div>
         <div>
             <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
             <form>
