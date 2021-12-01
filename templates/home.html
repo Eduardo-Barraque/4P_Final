@@ -22,7 +22,7 @@
     </header>
     <article>
         <div id="conhecer_section">
-            <p>Ajude o algorítimo a ser mais certeiro</p>
+            <h1>Ajude o algorítimo a ser mais certeiro</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. 
                 Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. 
@@ -39,28 +39,31 @@
         <div>
             <form id="ajudar_section">
                 <label for="">Seu Nome:</label>
-                <input type="text" name="" id="">
+                <input class="inputform" type="text" name="" id="">
                 <label for="">E-Mail:</label>
-                <input type="text" name="" id="">
+                <input class="inputform" type="text" name="" id="">
                 <label for="">CPF:</label>
-                <input type="text" name="" id="">
-                <input type="radio" name="genero">
-                <label for="genero">Maculino</label>
-                <input type="radio" name="genero">
-                <label for="genero">Feminino</label>
-                <input type="submit" value="Enviar">
+                <input class="inputform" type="text" name="" id="">
+                <div>
+                    <input class="bolinha" id="genero1" type="radio" name="genero">
+                    <label for="genero1">Maculino</label>
+                    <input class="bolinha" id="genero2" type="radio" name="genero">
+                    <label for="genero2">Feminino</label>
+                </div>
+                <input class="inputenviar" type="submit" value="Enviar">
             </form>
         </div>
-        <div id="produtos_section">Sua seleção especial</div>
-        <div>
-            {%for produto in produtos%}
-                <img src="{{produto.imagem}}">
-                <div>{{produto.nome}} </div>
-                <p>{{produto.description}}</p>
-                <p>de R${{produto.oldprice}}</p>
-                <p>por R${{produto.price}}</p>
-                <p>ou {{produto.parcela}}x de R${{produto.valorParcela}}0</p>
-            {%endfor%}
+        <div id="produtos_section"><p>Sua seleção especial</p>
+            <div>
+                {%for produto in produtos%}
+                    <img src="{{produto.imagem}}">
+                    <div>{{produto.nome}} </div>
+                    <p>{{produto.description}}</p>
+                    <p>de R${{produto.oldprice}}</p>
+                    <p>por R${{produto.price}}</p>
+                    <p>ou {{produto.parcela}}x de R${{produto.valorParcela}}0</p>
+                {%endfor%}
+            </div>
         </div>
         <button>Ainda mais produtos aqui!</button>
         <div id="compartilhe_section">Compartilhe a novidade</div>

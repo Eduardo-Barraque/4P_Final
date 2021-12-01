@@ -20,6 +20,10 @@ body article{
 body footer{
     grid-area: rodape;
 }
+body article{
+    display: grid;
+    grid-template-areas: "conhecer ajudar" "produtos produtos" "compartilhe compartilhe";
+}
 /*Botões geral*/
  button{
     text-decoration: none;
@@ -83,4 +87,61 @@ header div{
 header button{
     margin-left: 1.5vh;
     margin-right: 1.5vh;
+}
+/*Grid do article*/
+
+#conhecer_section{
+    grid-area: conhecer;
+    margin-left: 3vh;
+    margin-right: 3vh;
+}
+
+#ajudar_section{
+    grid-area: ajudar;
+    display: flex;
+    flex-direction: column;
+    color: #888888;
+    font-size: 2vh;
+    margin: 3vh;
+}
+.inputform{
+    width: 30vw;
+    margin-bottom: 2vh;
+    height: 3.5vh;
+}
+.bolinha{
+    width: 1vw;
+    margin-bottom: 2vh;
+}
+.inputenviar{
+    width: 30vw;
+    margin-bottom: 2vh;
+    color: #888888;
+    background-color: #FFFFFF;
+    border: 0.4vh solid;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-radius: 0.8vh;
+}
+#produtos_section{
+    grid-area: produtos;
+}
+#compartilhe_section{
+    grid-area: compartilhe;
+}
+article h1{
+    color: #888888;
+    font-family: Helvetica;
+    font-size: 2.8vh;
+    margin: 2vh;
+    margin-top: 5vh;
+}
+article p{
+    color: #888888;
+    font-family: Helvetica;
+    font-size: 2vh;
+    margin: 2vh;
+    text-align: justify;
 }
