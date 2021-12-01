@@ -1,13 +1,6 @@
-from flask import Flask, render_template
-import json
-import os
+from flask import render_template
 from application.model.dao.produtoDao import ProdutoDao
-
-app = Flask(__name__,static_folder=os.path.abspath("application/view/static"), 
-            template_folder=os.path.abspath("application/view/templates"))
-
-
-
+from application import app
 
 @app.route("/", methods=['GET'])
 def home():
