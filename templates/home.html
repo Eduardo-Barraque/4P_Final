@@ -53,19 +53,22 @@
                 <input class="inputenviar" type="submit" value="Enviar">
             </form>
         </div>
-        <div id="produtos_section"><p>Sua seleção especial</p>
-            <div>
+        <div id="produtos_section"><h1>Sua seleção especial</h1>
+            <div class="listaprodutos">
                 {%for produto in produtos%}
-                    <img src="{{produto.imagem}}">
-                    <div>{{produto.nome}} </div>
-                    <p>{{produto.description}}</p>
-                    <p>de R${{produto.oldprice}}</p>
-                    <p>por R${{produto.price}}</p>
-                    <p>ou {{produto.parcela}}x de R${{produto.valorParcela}}0</p>
+                    <div class="produto">
+                            <img class="imagemproduto" src="{{produto.imagem}}">
+                            <p class="nome">{{produto.nome}} </p>
+                            <p class="descricao">{{produto.description}}</p>
+                            <p class="oldprice">de R${{produto.oldprice}}</p>
+                            <p class="price">por R${{produto.price}}</p>
+                            <p class="parcelado">ou {{produto.parcela}}x de R${{produto.valorParcela}}0</p>
+                            <button>Comprar</button>
+                    </div>
                 {%endfor%}
             </div>
+            <button>Ainda mais produtos aqui!</button>
         </div>
-        <button>Ainda mais produtos aqui!</button>
         <div id="compartilhe_section">Compartilhe a novidade</div>
         <div>
             <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
